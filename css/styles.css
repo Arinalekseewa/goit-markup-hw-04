@@ -16,6 +16,7 @@ h1, h2, h3, p {
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
+    transition-property: all;
 }
 
 li {
@@ -93,6 +94,7 @@ border-bottom: 1px solid #e7e9fc;
     text-decoration: none;
     font-style: normal;
     padding: 24px 0;
+    transition-property: all;
 }
 
 .link:active {
@@ -142,6 +144,7 @@ border-bottom: 1px solid #e7e9fc;
     letter-spacing: 0.02em;
     color: #434455;
     text-decoration: none;
+    transition-property: all;
 }
 
 .contact:hover {
@@ -194,6 +197,7 @@ border-bottom: 1px solid #e7e9fc;
     display: block; 
     min-width: 169px;
     margin: auto;
+    transition-property: all;
 }
 
 .button:hover {
@@ -260,6 +264,9 @@ border-bottom: 1px solid #e7e9fc;
     border-color: #8E8F99;
     border: 1px solid rgba(142, 143, 153, 1);
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Our Team */
@@ -341,6 +348,7 @@ border-bottom: 1px solid #e7e9fc;
     border-radius: 50%;
     background-color: #4D5AE5;
     padding: 0;
+    transition-property: all;
 }
 
 .icon {
@@ -361,6 +369,38 @@ border-bottom: 1px solid #e7e9fc;
 
 .our-portfolio .container {
     display: block;
+}
+
+.our-portfolio-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-portfolio-img:hover .overlay{
+    transform: translateX(0);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+
+    transform: translatey(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.our-portfolio-img-overlay {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-left: 32px;
 }
 
 .our-portfolio-title {
@@ -465,4 +505,13 @@ border-bottom: 1px solid #e7e9fc;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+}
+
+.social-links .link {
+    transition-property: all;
+}
+
+.footer-social-media .social-links .link:hover .icon {
+    background-color: #31D0AA;
+    border-radius: 50%;
 }
